@@ -1,0 +1,142 @@
+// your variables overrides
+$theme-colors: (
+  "primary": #747B5E,
+  "danger": #AA3119,
+  "dark":#000007,
+  "light": #FBEFBB
+);
+
+@font-face {
+  font-family: 'Halloween';
+  src: url('../fonts/fofbb_ital.woff') format('woff2');
+}
+
+// import bootstrap -> only what you need
+@import "../node_modules/bootstrap/scss/bootstrap"; 
+
+
+body {
+  font-family: 'Caudex', serif;
+  color: theme-color($key: "light");
+}
+
+header {
+  height: 60vh;
+  background-image: url('https://www.hauntedevenings.co.uk/wp-content/uploads/2016/10/Ghost-Hunt-Newcastle-Castle-Outside-with-Haunted-Evenings.jpg');
+  background-size: cover;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.header-text-wrapper {
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+h1 {
+  font-family: 'Halloween';
+  font-size: 90px;
+  letter-spacing: 5px;;
+  max-width: 600px;
+  margin-left: 10%;
+  text-shadow: 5px 5px 5px theme-color($key: "primary");
+}
+
+h2 {
+  font-size: 30px;;
+  padding: 100px 0;
+  line-height: 50px;
+}
+
+
+.tickets-btn {
+  position: absolute;
+  right: 80px;
+  bottom: 50px;
+  box-shadow: 5px 5px 5px theme-color($key: "primary");
+}
+
+.btn {
+  padding: 20px 50px;
+  border-radius: 0;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 20px 20px 50px theme-color($key: "danger");
+}
+
+p {
+  font-size: 18px;
+  padding: 10px;
+  width: 75%;
+}
+
+.intro {
+  padding-bottom: 100px;
+}
+
+.intro .row {
+  min-height: 500px;
+}
+
+.map {
+  height: 600px;
+  background-image: url('http://ontheworldmap.com/uk/city/newcastle/newcastle-tourist-attractions-map.jpg');
+  background-position: 35% 65%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.map-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(116,123,94, 0.3);
+}
+
+.tickets-form {
+  background-color: theme-color($key: "danger");
+  form {
+    width: 50%;
+    max-width: 500px;
+    min-width: 300px;
+    .btn {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      box-shadow: 5px 5px 5px theme-color($key: "dark");
+    }
+  }
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: 75vh;
+    h1 {
+      font-size: 12vw; 
+    }
+  }
+  .intro .row {
+    margin: 50px 0;
+    img {
+      width: 90vw;
+    }
+  }
+  .intro-list:nth-child(2) {
+    img {
+      margin-bottom: 50px;
+    }
+  }
+}
