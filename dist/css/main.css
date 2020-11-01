@@ -10881,7 +10881,7 @@ p {
 
 .map {
   height: 600px;
-  background-image: url("/images/newcastle-tourist-attractions-map.jpg");
+  background-image: url("../../images/newcastle-tourist-attractions-map.jpg");
   background-position: 35% 65%;
   padding-left: 0;
   padding-right: 0;
